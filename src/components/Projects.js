@@ -50,40 +50,35 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <h2>Ace Your Placements</h2>
+                <p>Experience the Byte Buddy advantage: a holistic approach to personalized growth that goes beyond traditional learning platforms.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                      <Nav.Link eventKey="first">DS & Algo</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                      <Nav.Link eventKey="third">Development</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
                       <Row>
-                        {
-                          projects.map((project, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                {...project}
-                                />
-                            )
-                          })
-                        }
+                        <ProjectCard key={0} {...projects[0]}/>
+                        <Col>
+                          <h3 style={{textAlign: 'center', margin: '30px 0'}}>Unlocking the Code to Efficient Problem-Solving!</h3>
+                          <p className="dsa">Embark on a journey of mastery with Byte Buddy's comprehensive Data Structures and Algorithms (DSA) curriculum. Our expert-led courses and hands-on projects empower you to delve deep into the core concepts of DSA, equipping you with the skills needed to tackle complex coding challenges with confidence.</p>
+                        </Col>
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Row>
+                        <ProjectCard key={1} {...projects[1]}/>
+                        <Col>
+                          <h3 style={{textAlign: 'center', margin: '30px 0'}}>Creating Stunning, Functional Websites!</h3>
+                          <p className="dsa">Experience the art and science of web development like never before with Byte Buddy. Our immersive web development courses combine cutting-edge technologies with industry best practices to help you create stunning, functional websites that stand out in today's digital landscape. From front-end design to back-end functionality, Byte Buddy covers it all.</p>
+                        </Col>
+                      </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
