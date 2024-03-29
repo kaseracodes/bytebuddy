@@ -91,7 +91,9 @@ export const Contact = () => {
                 </form> */}
                 <p>Excited to kickstart your coding journey with Byte Buddy? Whether you're interested in joining our upcoming bootcamp or want to stay informed about future courses and opportunities, we'd love to hear from you! Simply fill out our quick and easy Google Form below to secure your spot in the bootcamp</p>
                 <Col size={12} className="px-1">
+                    <div className = "button-container">
                     <button type="submit" onClick={handleClick}><span>Register For Bootcamp</span></button>
+                    </div>
                 </Col>
               </div>}
             </TrackVisibility>

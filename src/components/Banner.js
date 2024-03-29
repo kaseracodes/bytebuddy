@@ -12,7 +12,7 @@ export const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
   const toRotate = [ "Developers", "Programmers", "Builders" ];
-  const period = 2000;
+  const period = 200;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -41,7 +41,7 @@ export const Banner = () => {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setIndex(1);
-      setDelta(500);
+      setDelta(200);
     } else {
       setIndex(prevIndex => prevIndex + 1);
     }
@@ -56,10 +56,10 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Building Futures, One Byte at a Time</span>
-                <h1>{`Hi! Future`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Developers", "Programmers", "Builders" ]'><span className="wrap">{text}</span></span></h1>
-                <p>Empowering Coders to Engineer Solutions. Providing Expert Mentorship and Guidance to Navigate Recessive Markets and Secure Your Career in Tech.</p>
+              <div className={isVisible ? "animate__animated animate__fadeIn" : ""} id = "banner-contents">
+                <p className="tagline">Building Futures, One Byte at a Time</p>
+                <h1>{`Hi! Future`} <br/><span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Developers", "Programmers", "Builders" ]'><span className="wrap">{text}</span></span></h1>
+                <span>Empowering Coders to Engineer Solutions. Providing Expert Mentorship and Guidance to Navigate Recessive Markets and Secure Your Career in Tech.</span>
                 <button onClick={() => window.open(`${bootcampBrochureLink}`, '_blank')}>Bootcamp <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
@@ -68,7 +68,7 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img style={{marginBottom: '150px'}} src={headerImg} alt="Header Img"/>
+                  <img src={headerImg} alt="Header Img"/>
                 </div>}
             </TrackVisibility>
           </Col>

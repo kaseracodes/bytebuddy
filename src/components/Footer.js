@@ -19,21 +19,28 @@ export const Footer = () => {
           {/* <MailchimpForm />  */}
           <Col size={12} sm={6}>
             {/* <img src={logo} alt="Logo" /> */}
+            <div className="footer-heading">
             <h3>Byte <span id = "buddy">Buddy</span></h3>
+            </div>
             {/* <a href="#"> Brochure</a> <br/>
             <a href="#"> Data Structures & Algo Bootcamp Schedule</a> <br/>
             <a href="#"> Web Development Bootcamp Schedule</a> */}
+            <div className="footer-pdfs">
             <button className="footlinks" onClick={() => window.open(`${brochureLink}`, '_blank')}>Brochure</button> <br/>
             <button className="footlinks" onClick={() => window.open(`${webBootcampBrochureLink}`, '_blank')}>Web Dev Bootcamp</button> <br/>
             <button className="footlinks" onClick={() => window.open(`${dsaBootcampBrochureLink}`, '_blank')}>Data Structures & Algorithms Bootcamp</button>
+            </div>
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
+          <div className="social-parent">
             <div className="social-icon">
-              <a href="#"><img src={navIcon1} alt="Icon" /></a>
-              <a href="#"><img src={navIcon2} alt="Icon" /></a>
-              <a href="#"><img src={navIcon3} alt="Icon" /></a>
+              <a className="social-media-links" href="https://www.linkedin.com/company/103128800" target="_blank"><img src={navIcon1} alt="Icon" /></a>
+              <a className="social-media-links" href="https://www.facebook.com/profile.php?id=61557564402416" target="_blank"><img src={navIcon2} alt="Icon" /></a>
+              <a className="social-media-links" href="https://www.instagram.com/bytebudddy" target="_blank"><img src={navIcon3} alt="Icon" /></a>
+            </div>
             </div>
             <p>Copyright 2024. All Rights Reserved</p>
+            <p>Mail Us: <a id="mailID" href="mailto:bytebuddy.services@gmail.com">bytebudddy.services@gmail.com</a></p>
           </Col>
         </Row>
       </Container>
