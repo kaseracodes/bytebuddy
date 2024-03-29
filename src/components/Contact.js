@@ -36,11 +36,15 @@ export const Contact = () => {
     setButtonText("Send");
     let result = await response.json();
     setFormDetails(formInitialDetails);
-    if (result.code == 200) {
+    if (result.status == 200) {
       setStatus({ succes: true, message: 'Message sent successfully'});
     } else {
       setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
     }
+  };
+
+  const handleClick = (e) => {
+    window.open('https://forms.gle/kPF1dhH8L2Si52138', '_blank');
   };
 
   return (
@@ -59,7 +63,7 @@ export const Contact = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <h2>Get In Touch</h2>
-                <form onSubmit={handleSubmit}>
+                {/* <form onSubmit={handleSubmit}>
                   <Row>
                     <Col size={12} sm={6} className="px-1">
                       <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
@@ -84,7 +88,11 @@ export const Contact = () => {
                       </Col>
                     }
                   </Row>
-                </form>
+                </form> */}
+                <p>Excited to kickstart your coding journey with Byte Buddy? Whether you're interested in joining our upcoming bootcamp or want to stay informed about future courses and opportunities, we'd love to hear from you! Simply fill out our quick and easy Google Form below to secure your spot in the bootcamp</p>
+                <Col size={12} className="px-1">
+                    <button type="submit" onClick={handleClick}><span>Register For Bootcamp</span></button>
+                </Col>
               </div>}
             </TrackVisibility>
           </Col>

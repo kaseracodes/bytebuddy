@@ -1,6 +1,8 @@
 import meter1 from "../assets/img/meter1.svg";
 import meter2 from "../assets/img/meter2.svg";
-import community from "../assets/img/community.png";
+import community from "../assets/img/community.svg";
+import expert from "../assets/img/expert.svg";
+import career from "../assets/img/career.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
@@ -38,15 +40,15 @@ export const Skills = () => {
                         <p>At Byte Buddy, we believe in transforming coders into problem-solving engineers. In today's recessive markets, it's crucial to think beyond just writing code. Our expert mentorship and guidance ensure that you're equipped with the skills and mindset <br/> needed to thrive in the tech industry.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={expert} alt="Image" />
                                 <h5>Expert Mentorship</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image" />
+                                <img src={career} alt="Image" />
                                 <h5>Career Guidance</h5>
                             </div>
                             <div className="item">
-                                <img style={{height: '204px', width: '204px'}} src={community} alt="Image" />+
+                                <img src={community} alt="Image" />+
                                 <h5>Community Support</h5>
                             </div>
                         </Carousel>

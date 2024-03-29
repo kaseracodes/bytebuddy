@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/bannerIcon.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -47,6 +47,8 @@ export const Banner = () => {
     }
   }
 
+  const bootcampBrochureLink = "https://drive.google.com/file/d/1-v9WvlM99AICYB7Z8aDkJweptzrzybOM/view?usp=sharing";
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -57,8 +59,8 @@ export const Banner = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Building Futures, One Byte at a Time</span>
                 <h1>{`Hi! Future`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Developers", "Programmers", "Builders" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Empowering Coders to Engineer Solutions. Providing Expert Mentorship and Guidance to Navigate Recessive Markets and Secure Your Career in Tech.</p>
-                  <button onClick={() => console.log('connect')}>Bootcamp <ArrowRightCircle size={25} /></button>
+                <p>Empowering Coders to Engineer Solutions. Providing Expert Mentorship and Guidance to Navigate Recessive Markets and Secure Your Career in Tech.</p>
+                <button onClick={() => window.open(`${bootcampBrochureLink}`, '_blank')}>Bootcamp <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
           </Col>
@@ -66,7 +68,7 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
+                  <img style={{marginBottom: '150px'}} src={headerImg} alt="Header Img"/>
                 </div>}
             </TrackVisibility>
           </Col>
